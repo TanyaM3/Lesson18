@@ -19,6 +19,7 @@ import by.epam.hw.less18.entity.VacuumCleaner;
 import by.epam.hw.less18.entity.criteria.Criteria;
 
 public class FindDeviceDAOImpl implements DeviceDAO {
+	private String path = "devices.txt";
 
 	@Override
 	public List<Device> find(Criteria criteria) throws DAOException {
@@ -31,7 +32,7 @@ public class FindDeviceDAOImpl implements DeviceDAO {
 		try {
 			String currentLine;
 
-			reader = new BufferedReader(new FileReader("devices.txt"));
+			reader = new BufferedReader(new FileReader(path));
 			while ((currentLine = reader.readLine()) != null) {
 				if (currentLine.contains(searchedType)) {
 
