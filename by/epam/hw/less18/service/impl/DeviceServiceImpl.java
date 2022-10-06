@@ -30,7 +30,6 @@ public class DeviceServiceImpl implements DeviceService {
 			throw new ServiceException(e);
 		}
 
-		// you may add your own code here
 
 		return devices;
 	}
