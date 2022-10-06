@@ -55,7 +55,6 @@ public class FindDeviceDAOImpl implements DeviceDAO {
 							oven.setHeight(Integer.parseInt(stringData[10]));
 							oven.setWidth(Integer.parseInt(stringData[12]));
 							devices.add(oven);
-
 							break;
 						case "Laptop ":
 							Laptop laptop = new Laptop();
@@ -129,7 +128,6 @@ public class FindDeviceDAOImpl implements DeviceDAO {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
 		}
 		return devices;
 	}
